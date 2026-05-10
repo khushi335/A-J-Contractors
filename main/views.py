@@ -34,3 +34,6 @@ def custom_shelving(request):
     
 def steel_welding(request):
     return render(request, 'main/steel_welding.html')
+    
+def debris_removal(request):
+    return render(request, 'main/debris_removal.html')
