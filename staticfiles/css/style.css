@@ -1,0 +1,1486 @@
+:root {
+    --obsidian: #121416;
+    --bronze: #C59D5F; /* Strategic Gold */
+    --platinum: #F8FAFC;
+    --slate: #2D3748;
+    --white: #FFFFFF;
+    --primary-dark: #1A1C1E;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--slate);
+    overflow-x: hidden;
+    background-color: var(--white);
+}
+
+/* SEO Typography */
+h1, h2, h3, h4, .btn-bronze {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--obsidian);
+    color: var(--white);
+    font-size: 13px;
+    border-bottom: 2px solid var(--bronze);
+}
+
+.text-bronze { color: var(--bronze) !important; }
+
+/* Navbar Styling */
+.nav-link {
+    font-weight: 600;
+    color: var(--obsidian) !important;
+    padding: 10px 15px !important;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--bronze) !important;
+}
+
+/* Dropdown Animation */
+.dropdown-menu {
+    border-top: 4px solid var(--bronze) !important;
+    border-radius: 0;
+    padding: 0;
+}
+
+.dropdown-item {
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 13px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bronze);
+    color: white;
+}
+
+/* The Call To Action Button */
+.btn-bronze {
+    background-color: var(--bronze);
+    color: white;
+    border-radius: 0;
+    border: 2px solid var(--bronze);
+    transition: 0.4s;
+    font-size: 13px;
+}
+
+.btn-bronze:hover {
+    background-color: transparent;
+    color: var(--bronze);
+}
+
+/* SEO Footer */
+.footer {
+    background-color: var(--obsidian);
+    font-size: 15px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--bronze);
+    padding-left: 5px;
+}
+
+/* Responsive Mobile Adjustments */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+        padding: 20px;
+        margin-top: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .btn-bronze {
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+/* Animations */
+.animate { animation-duration: 0.4s; animation-fill-mode: both; }
+@keyframes slideIn {
+    0% { transform: translateY(1rem); opacity: 0; }
+    100% { transform: translateY(0rem); opacity: 1; }
+}
+.slideIn { animation-name: slideIn; }
+
+
+
+
+
+
+/* ==========================================================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================================================== */
+:root {
+    --primary-dark: #1A1C1E; /* Obsidian */
+    --accent-gold: #C59D5F;  /* A&J Bronze/Gold */
+    --text-light: #F8FAFC;   /* Platinum */
+    --text-muted: #A0AEC0;
+    --white: #FFFFFF;
+    --transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-dark);
+    overflow-x: hidden;
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   2. NAVBAR - Obsidian Style
+   ========================================================================== */
+.navbar-custom {
+    background-color: var(--primary-dark) !important;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(197, 157, 95, 0.2);
+    transition: var(--transition);
+}
+
+.navbar-custom .nav-link {
+    color: var(--white) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    margin: 0 10px;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--accent-gold) !important;
+}
+
+/* Appointment Button */
+.btn-appointment {
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+    font-weight: 700;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 2px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.btn-appointment:hover {
+    background-color: var(--white);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   3. HERO CAROUSEL - Professional & Industrial
+   ========================================================================== */
+.carousel-item {
+    height: 100vh;
+    min-height: 600px;
+    background-color: var(--primary-dark);
+}
+
+.hero-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(40%) contrast(1.1);
+}
+
+/* Caption and Text Layout */
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto !important;
+    text-align: left;
+    padding: 0 5%;
+    z-index: 5;
+}
+
+.content-box {
+    max-width: 850px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes heroFadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.display-1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.text-bronze {
+    color: var(--accent-gold);
+}
+
+.caption-label {
+    background: var(--accent-gold);
+    color: var(--white);
+    padding: 6px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+}
+
+/* ==========================================================================
+   4. TRUST RIBBON & NAVIGATION
+   ========================================================================== */
+.trust-ribbon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(26, 28, 30, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+    border-top: 3px solid var(--accent-gold);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.trust-item i {
+    font-size: 1.8rem;
+    color: var(--accent-gold);
+    margin-right: 15px;
+}
+
+.trust-item span {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+
+.trust-item small {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+/* Custom Arrows */
+.custom-nav-icon {
+    width: 55px;
+    height: 55px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+    color: var(--white);
+}
+
+.custom-nav-icon:hover {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+/* ==========================================================================
+   5. RESPONSIVE QUERIES
+   ========================================================================== */
+
+/* Tablets */
+@media (max-width: 991px) {
+    .carousel-item { height: 85vh; }
+    
+    .carousel-caption {
+        text-align: center;
+        left: 0 !important;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .lead { margin: 0 auto 2rem auto; }
+    
+    .trust-ribbon {
+        padding: 15px 0;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+    .display-1 { font-size: 2.8rem; }
+    
+    .trust-ribbon { display: none !important; } /* Hide on small screens for UX */
+    
+    .carousel-control-prev, .carousel-control-next { display: none; } /* Use swipe */
+}
+
+@media (max-width: 576px) {
+    .carousel-item { height: 75vh; }
+    
+    .btn-group-hero {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-group-hero .btn { width: 100%; }
+}
+
+
+
+
+
+
+
+
+/* --- High-End Refinements & Spacing Fixes --- */
+
+/* Main Section Wrapper with significantly more vertical 'Air' */
+.about-section {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    background-color: #ffffff; /* Ensures contrast if the previous section was gray */
+}
+
+.fw-900 { font-weight: 900; }
+
+.text-outline {
+    -webkit-text-stroke: 1px #1A1C1E;
+    color: transparent;
+}
+
+/* Added gap between subtitle and title */
+.subtitle-wrapper {
+    margin-bottom: 25px;
+}
+
+.line-accent {
+    width: 50px; /* Made slightly longer for better balance */
+    height: 2px;
+    background-color: #C59D5F; /* Bronze */
+    display: inline-block;
+}
+
+/* Spacing out the main heading */
+.about-section h1 {
+    margin-bottom: 35px !important;
+    line-height: 1.1;
+}
+
+/* Service Mosaic Tiles - Increased internal padding and spacing */
+.service-mosaic {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.mosaic-item {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 30px 20px; /* Increased vertical padding */
+    text-align: center;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.mosaic-item i {
+    display: block;
+    font-size: 28px;
+    color: #C59D5F;
+    margin-bottom: 15px;
+}
+
+.mosaic-item span {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #1A1C1E;
+}
+
+.mosaic-item:hover {
+    background: #1A1C1E; /* Obsidian */
+    border-color: #1A1C1E;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.mosaic-item:hover span, .mosaic-item:hover i {
+    color: #fff;
+}
+
+/* Image Stack Container - Fixed Congestion */
+.image-stack-container {
+    padding: 60px; /* Increased from 40px to prevent the frame from looking cramped */
+}
+
+.main-image-wrapper {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.main-img {
+    transition: transform 0.8s ease;
+}
+
+.main-image-wrapper:hover .main-img {
+    transform: scale(1.08);
+}
+
+.glass-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(26,28,30,0.3) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Floating Stat Card */
+.stat-card {
+    position: absolute;
+    bottom: 5%; /* Adjusted for better positioning */
+    right: 0;
+    z-index: 5;
+    min-width: 260px;
+    border-left: 6px solid #C59D5F;
+    background-color: #1A1C1E;
+}
+
+/* Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Geo Decorative Accent - More offset to look intentional, not accidental */
+.geo-accent {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 85%;
+    height: 95%;
+    background: #f8f8f8;
+    z-index: 1;
+    border: 1px solid #e0e0e0;
+}
+
+/* Premium Button Spacing */
+.btn-premium-bronze {
+    background-color: #C59D5F;
+    color: #fff !important;
+    border-radius: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s;
+    border: none;
+    box-shadow: 0 10px 30px rgba(197, 157, 95, 0.4);
+}
+
+/* Responsive Fixes - Increased spacing for mobile */
+@media (max-width: 991px) {
+    .about-section {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+    
+    .image-stack-container {
+        padding: 40px 15px;
+        margin-top: 70px; /* Pushes image down so it doesn't touch the text above on mobile */
+    }
+    
+    .display-3 { font-size: 2.5rem; }
+    
+    .mosaic-item {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+/* ==========================================================================
+   BRAND IDENTITY SECTION - FULL WIDTH MODERNIZE
+   ========================================================================== */
+
+.brand-identity-section {
+    width: 100% !important;
+    overflow-x: hidden;
+    background-color: #F8F9FA; /* Contrast background */
+}
+
+/* 1. The Container Fix - Forces the bar to the edges */
+.brand-card {
+    background-color: #1A1C1E; /* Your Obsidian Color */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0 !important; /* Sharp edges for full-screen bars look better */
+    display: flex;
+    align-items: center;
+}
+
+/* 2. The Image Fix - Ensures brand.jpg shows clearly and fully */
+.brand-logo-main {
+    width: 100%;
+    max-width: 280px; /* Adjust based on your logo shape */
+    height: auto;
+    object-fit: contain; /* Shows full image without cropping */
+    transition: transform 0.4s ease;
+    /* Remove filter: brightness(0) invert(1); if your brand.jpg is already colored */
+}
+
+.brand-logo-main:hover {
+    transform: scale(1.05);
+}
+
+/* 3. Column Layout & Spacing */
+.brand-side-block {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 60px 40px;
+}
+
+.brand-center-block {
+    position: relative;
+    padding: 60px 50px;
+}
+
+/* High-End Vertical Dividers (Desktop Only) */
+@media (min-width: 992px) {
+    .brand-center-block::before, .brand-center-block::after {
+        content: "";
+        position: absolute;
+        top: 25%;
+        bottom: 25%;
+        width: 1px;
+        background: linear-gradient(to bottom, transparent, #C59D5F, transparent);
+        opacity: 0.4;
+    }
+    .brand-center-block::before { left: 0; }
+    .brand-center-block::after { right: 0; }
+}
+
+/* 4. Text & Badges Styling */
+.brand-description {
+    color: #CBD5E0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.badge-item {
+    color: #C59D5F;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(197, 157, 95, 0.3);
+    padding: 6px 16px;
+    border-radius: 2px; /* Square industrial style */
+    background: rgba(197, 157, 95, 0.05);
+}
+
+/* 5. Action Card (The QR Replacement) */
+.action-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(197, 157, 95, 0.2);
+    padding: 30px;
+    margin: 0 20px;
+    border-radius: 4px;
+}
+
+.btn-bronze-action {
+    background-color: #C59D5F;
+    color: #1A1C1E;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px;
+    border: none;
+    transition: 0.3s;
+    display: block;
+    text-decoration: none;
+}
+
+.btn-bronze-action:hover {
+    background-color: #FFFFFF;
+    color: #1A1C1E;
+    transform: translateY(-3px);
+}
+
+.license-text {
+    color: #C59D5F;
+    display: block;
+    margin-top: 15px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 991px) {
+    .brand-side-block, .brand-center-block, .brand-action-block {
+        padding: 40px 20px;
+    }
+    
+    .brand-logo-main {
+        max-width: 200px;
+    }
+
+    .brand-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .brand-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .badge-item {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+/* --- A&J Services Premium Redesign --- */
+:root {
+    --bronze: #C59D5F;
+    --obsidian: #1A1C1E;
+    --light-gray: #f8f9fa;
+}
+
+/* Reduced Vertical Space to 40px */
+.py-40 { 
+    padding-top: 20px !important; 
+    padding-bottom: 20px !important; 
+}
+
+.fw-900 { font-weight: 900; }
+.text-outline { -webkit-text-stroke: 1px var(--obsidian); color: transparent; }
+
+/* The Service Card Wrapper */
+.aj-service-card {
+    background: #fff;
+    border-radius: 0;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: 3px solid transparent;
+}
+
+.aj-card-img {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+}
+
+.aj-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.aj-category {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--bronze);
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 5px 15px;
+    letter-spacing: 1.5px;
+    z-index: 3;
+}
+
+/* Floating Body Effect */
+.aj-card-body {
+    padding: 35px 25px; /* Slightly tighter internal padding */
+    margin-top: -50px;
+    background: #fff;
+    position: relative;
+    z-index: 4;
+    width: 90%;
+    margin-left: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.5s;
+}
+
+.aj-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--obsidian);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: 0.4s;
+}
+
+.aj-card-body h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.aj-card-body p {
+    font-size: 0.88rem;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.aj-link {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--obsidian);
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--bronze);
+    padding-bottom: 3px;
+    transition: 0.3s;
+}
+
+/* Interactive Hover States */
+.aj-service-card:hover {
+    transform: translateY(-8px);
+    border-bottom-color: var(--bronze);
+}
+
+.aj-service-card:hover .aj-card-img img {
+    transform: scale(1.1);
+}
+
+.aj-service-card:hover .aj-card-body {
+    width: 100%; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.aj-service-card:hover .aj-icon {
+    background: var(--bronze);
+    transform: rotateY(180deg);
+}
+
+.highlight-card .aj-icon {
+    background: var(--bronze);
+}
+
+@media (max-width: 768px) {
+    .aj-card-body {
+        width: 95%;
+        margin-top: -30px;
+    }
+}
+
+
+
+
+
+
+
+/* --- A&J Expanded Portfolio Styles --- */
+.bg-platinum { background-color: #f8f9fa; }
+.fw-900 { font-weight: 900; }
+.text-bronze { color: #C59D5F; }
+.text-outline { -webkit-text-stroke: 1px #121416; color: transparent; }
+
+.aj-portfolio-card {
+    position: relative;
+    overflow: hidden;
+    background: #121416;
+    height: 380px; /* Base height */
+    transition: all 0.5s ease;
+}
+
+.aj-portfolio-card.featured {
+    height: 500px;
+}
+
+.aj-portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s ease, opacity 0.5s ease;
+    opacity: 0.9;
+}
+
+.aj-card-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--bronze);
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    z-index: 3;
+}
+
+.aj-card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(to top, rgba(18,20,22,0.9) 0%, transparent 100%);
+    z-index: 2;
+    transform: translateY(20px);
+    transition: transform 0.5s ease;
+}
+
+.aj-portfolio-card:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.aj-portfolio-card:hover .aj-card-info {
+    transform: translateY(0);
+}
+
+.aj-card-info .category {
+    color: var(--bronze);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.aj-card-info .title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.aj-card-info .location {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+/* Responsive Fix for Featured Card */
+@media (max-width: 991px) {
+    .aj-portfolio-card.featured, .aj-portfolio-card {
+        height: 350px;
+    }
+}
+
+.btn-outline-obsidian {
+    border: 2px solid #121416;
+    color: #121416;
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+.btn-outline-obsidian:hover {
+    background: #121416;
+    color: #fff;
+}
+
+
+
+
+
+
+/* --- A&J Choice Redesign Styles --- */
+:root {
+    --bronze: #C59D5F;
+    --obsidian: #121416;
+}
+
+.fw-900 { font-weight: 900; }
+.text-bronze { color: var(--bronze); }
+.bg-obsidian { background-color: var(--obsidian); }
+.py-100 { padding: 30px 0; }
+
+.bg-abstract-shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background: #f8f9fa;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Image Composition */
+.why-image-composition {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.main-img-wrapper {
+    position: relative;
+    z-index: 2;
+    border-left: 5px solid var(--bronze);
+}
+
+.main-img-wrapper img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.sub-img-wrapper {
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+    width: 250px;
+    z-index: 3;
+    border: 8px solid #fff;
+}
+
+.sub-img-wrapper img {
+    width: 100%;
+}
+
+.experience-badge {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+    background: var(--bronze);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.experience-badge .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Feature Items */
+.aj-feature-item {
+    padding: 20px;
+    transition: 0.3s ease;
+    border-bottom: 1px solid #eee;
+    height: 100%;
+}
+
+.aj-feature-item:hover {
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-bottom-color: var(--bronze);
+    transform: translateY(-5px);
+}
+
+.aj-icon-box {
+    font-size: 1.5rem;
+    color: var(--bronze);
+    margin-bottom: 15px;
+}
+
+.aj-feature-item h5 {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons and Utils */
+.btn-obsidian {
+    background: var(--obsidian);
+    color: #fff;
+    border-radius: 0;
+    transition: 0.4s;
+}
+
+.btn-obsidian:hover {
+    background: var(--bronze);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.text-outline {
+    -webkit-text-stroke: 1px var(--obsidian);
+    color: transparent;
+}
+
+.border-white-10 {
+    border-color: rgba(255,255,255,0.1) !important;
+}
+
+@media (max-width: 991px) {
+    .sub-img-wrapper { display: none; }
+    .bg-abstract-shape { display: none; }
+}
+
+
+
+
+
+
+/* --- A&J Stats Premium Styles --- */
+.aj-stats-section {
+    padding: 0;
+    margin-top: -30px; /* Pulls it up to overlap the previous section */
+    position: relative;
+    z-index: 10;
+}
+
+.stats-glass-wrapper {
+    background: #121416;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    border-bottom: 4px solid var(--bronze);
+}
+
+.stat-premium-item {
+    padding: 60px 40px;
+    position: relative;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+/* Vertical Dividers */
+.stat-premium-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.stat-label {
+    display: block;
+    color: var(--bronze);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-suffix {
+    color: var(--bronze);
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+
+.stat-description {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 0;
+}
+
+/* Hover & Active States */
+.stat-premium-item.active, 
+.stat-premium-item:hover {
+    background: #1a1c1e;
+}
+
+.stat-premium-item:hover .stat-value {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .aj-stats-section {
+        margin-top: -30px;
+        padding: 0 15px;
+    }
+    
+    .stat-premium-item {
+        padding: 40px 20px;
+    }
+    
+    .stat-premium-item:not(:last-child)::after {
+        width: 50%;
+        height: 1px;
+        top: auto;
+        bottom: 0;
+        right: 25%;
+    }
+    
+    .stat-value {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+
+
+/* --- A&J Hire Us Redesign Styles --- */
+.text-outline {
+    -webkit-text-stroke: 1px #121416;
+    color: transparent;
+}
+
+/* Visual Stack */
+.aj-visual-stack {
+    position: relative;
+    padding: 20px;
+}
+
+.main-frame {
+    border: 10px solid #121416;
+    height: 550px;
+    overflow: hidden;
+}
+
+.main-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.aj-visual-stack:hover .main-frame img {
+    transform: scale(1.05);
+}
+
+.floating-stat {
+    position: absolute;
+    bottom: -30px;
+    right: -10px;
+    background: #fff;
+    padding: 30px;
+    border-bottom: 5px solid var(--bronze);
+    z-index: 5;
+}
+
+.line-deco {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    border-top: 5px solid var(--bronze);
+    border-left: 5px solid var(--bronze);
+    z-index: -1;
+}
+
+/* Hire Cards */
+.aj-hire-card {
+    padding: 25px;
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.aj-hire-card:hover {
+    background: #fff;
+    border-color: var(--bronze);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+}
+
+.aj-icon-wrapper {
+    font-size: 2rem;
+    color: var(--bronze);
+    margin-bottom: 15px;
+}
+
+.btn-outline-bronze {
+    border: 2px solid var(--bronze);
+    color: #121416;
+    border-radius: 0;
+}
+
+.btn-outline-bronze:hover {
+    background: var(--bronze);
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .main-frame { height: 400px; }
+    .floating-stat { position: relative; bottom: 0; right: 0; margin-top: 20px; }
+}
+
+
+
+
+
+
+/* --- A&J Contact Custom Styles --- */
+.shadow-premium {
+    box-shadow: 0 50px 100px rgba(0,0,0,0.1);
+}
+
+.fw-900 { font-weight: 900; }
+.text-outline { -webkit-text-stroke: 1px #121416; color: transparent; }
+
+/* Form Elements */
+.aj-input {
+    border: none;
+    border-bottom: 2px solid #eee;
+    border-radius: 0;
+    padding-left: 0;
+    background: transparent;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.aj-input:focus {
+    box-shadow: none;
+    background: transparent;
+    border-color: var(--bronze);
+}
+
+.header-line {
+    width: 60px;
+    height: 4px;
+    background: var(--bronze);
+    margin-top: 15px;
+}
+
+/* Contact Details Styling */
+.aj-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--bronze);
+    border-radius: 50%;
+}
+
+.social-icon-btn {
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icon-btn:hover {
+    background: var(--bronze);
+    border-color: var(--bronze);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.bg-obsidian {
+    background-color: #121416 !important;
+}
+
+/* Responsive Fixes */
+@media (max-width: 991px) {
+    .aj-input { border-bottom: 2px solid #ddd; padding: 12px; margin-bottom: 10px; }
+    .col-lg-5 { order: -1; } /* Info on top for mobile */
+}
+
+
+
+
+
+
+
+/* --- A&J Map UI Styles --- */
+.aj-map-card {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    background: #121416; /* Obsidian background */
+    padding: 50px 40px;
+    width: 380px;
+    z-index: 10;
+    border-top: 6px solid var(--bronze);
+    box-shadow: 25px 25px 50px rgba(0,0,0,0.5);
+}
+
+.bg-dark-bronze {
+    background-color: rgba(197, 157, 95, 0.1);
+    color: var(--bronze);
+    border: 1px solid rgba(197, 157, 95, 0.3);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-bronze {
+    background: var(--bronze);
+    color: #fff;
+    border-radius: 0;
+    font-size: 13px;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-bronze:hover {
+    background: #fff;
+    color: #121416;
+    transform: translateY(-3px);
+}
+
+/* Map Interactions */
+iframe {
+    opacity: 0.85;
+    transition: all 0.7s ease;
+}
+
+iframe:hover {
+    filter: grayscale(0) contrast(1);
+    opacity: 1;
+}
+
+/* Responsive Handling */
+@media (max-width: 1200px) {
+    .aj-map-card { left: 5%; width: 320px; padding: 30px; }
+}
+
+@media (max-width: 991px) {
+    .aj-map-card { display: none; }
+    section { height: 400px !important; }
+}
+
+
+
+
+
+
+
+/* --- About Page Special Styles --- */
+.page-header {
+    background-image: linear-gradient(rgba(18, 20, 22, 0.9), rgba(18, 20, 22, 0.9)), url("{% static 'img/header-bg.jpg' %}");
+    background-size: cover;
+    background-position: center;
+}
+
+.image-overlay-stack {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.floating-experience {
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    width: 200px;
+    text-align: center;
+    border-left: 5px solid var(--obsidian);
+}
+
+.mission-card {
+    transition: transform 0.4s ease;
+    border-top: 4px solid var(--bronze);
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-wrap i {
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+.header-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--bronze) 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--bronze);
+}
+
+.bg-platinum {
+    background-color: #f4f4f4;
+}
+
+
+
+

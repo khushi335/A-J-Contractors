@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(18, 20, 22, 0.8), rgba(18, 20, 22, 0.8)), url('{% static 'img/framing.jpg' %}') center center no-repeat; background-size: cover;">
+    <div class="container py-5 text-center">
+        <h1 class="display-1 text-white text-uppercase fw-bold mb-0">Contact Us</h1>
+        <div class="d-inline-flex align-items-center text-white mt-3">
+            <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'index' %}">Home</a></p>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <p class="m-0 text-uppercase text-bronze">Get In Touch</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-6 px-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form Side -->
+            <div class="col-lg-7">
+                <h6 class="text-bronze text-uppercase fw-bold mb-3" style="letter-spacing: 5px;">Inquiry</h6>
+                <h1 class="display-5 text-uppercase mb-4">Request A <span class="text-outline-dark">Consultation</span></h1>
+                <p class="mb-5">Ready to start your next project in New York or New Jersey? Fill out the form below and our engineering team will get back to you within 24 hours.</p>
+                
+                <form action="{% url 'contact' %}" method="POST" class="contact-form">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-light border-0" id="name" name="name" placeholder="Your Name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control bg-light border-0" id="email" name="email" placeholder="Your Email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-light border-0" id="subject" name="subject" placeholder="Subject">
+                                <label for="subject">Project Type (e.g., Roofing, Framing)</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" name="message" style="height: 150px" required></textarea>
+                                <label for="message">Message Details</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-bronze w-100 py-3 text-uppercase fw-bold shadow-sm" type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contact Info Side -->
+            <div class="col-lg-5">
+                <div class="contact-info-card bg-obsidian text-white p-5 shadow-lg h-100 position-relative overflow-hidden">
+                    <div class="card-accent-line"></div>
+                    <h3 class="text-uppercase fw-bold mb-4 pb-2 border-bottom border-bronze">Office Info</h3>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="contact-icon-box me-3">
+                            <i class="fa fa-map-marker-alt text-bronze"></i>
+                        </div>
+                        <div>
+                            <h6 class="text-bronze text-uppercase fw-bold mb-1">Service Area</h6>
+                            <p class="mb-0">Serving South River, South River, NJ, United States</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="contact-icon-box me-3">
+                            <i class="fa fa-phone-alt text-bronze"></i>
+                        </div>
+                        <div>
+                            <h6 class="text-bronze text-uppercase fw-bold mb-1">Direct Line</h6>
+                            <p class="mb-0 fw-bold">(732) 690-4863</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="contact-icon-box me-3">
+                            <i class="fa fa-envelope text-bronze"></i>
+                        </div>
+                        <div>
+                            <h6 class="text-bronze text-uppercase fw-bold mb-1">Email Us</h6>
+                            <p class="mb-0">info@aandjcontractors.com</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-4">
+                        <h6 class="text-uppercase fw-bold text-white mb-3" style="font-size: 0.8rem; letter-spacing: 2px;">Professional Status</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="credential-tag">Licensed</span>
+                            <span class="credential-tag">Bonded</span>
+                            <span class="credential-tag">Insured</span>
+                            <span class="credential-tag">OSHA Cert.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Map Section -->
+<div class="container-fluid p-0 mt-5">
+    <iframe class="w-100" style="height: 450px; filter: contrast(1.2) invert(0.9);"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48419.04944355554!2d-74.24945325!3d40.6639891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24d6735e5e6fb%3A0xc3335b2e67a65955!2sElizabeth%2C%20NJ!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus"
+        frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+{% endblock %}

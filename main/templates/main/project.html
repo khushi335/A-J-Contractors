@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(18, 20, 22, 0.8), rgba(18, 20, 22, 0.8)), url('{% static 'img/project-banner.jpg' %}') center center no-repeat; background-size: cover;">
+    <div class="container py-5 text-center">
+        <h1 class="display-1 text-white text-uppercase fw-bold mb-0">Our <span class="text-bronze">Works</span></h1>
+        <div class="d-inline-flex align-items-center text-white mt-3">
+            <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'index' %}">Home</a></p>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <p class="m-0 text-uppercase text-bronze">Project Portfolio</p>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio Start -->
+<div class="container-fluid py-6 px-5">
+    <div class="container">
+        <div class="row g-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h6 class="text-bronze text-uppercase fw-bold mb-3" style="letter-spacing: 5px;">Portfolio</h6>
+                <h1 class="display-5 text-uppercase mb-5">Crafting The <span class="text-outline-dark">Future</span> of New Jersey</h1>
+            </div>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="row g-2 justify-content-center mb-5">
+            <div class="col-auto">
+                <button class="btn btn-outline-obsidian filter-btn active" data-filter="all">All Projects</button>
+                <button class="btn btn-outline-obsidian filter-btn" data-filter="demo">Demolition</button>
+                <button class="btn btn-outline-obsidian filter-btn" data-filter="roof">Roofing</button>
+                <button class="btn btn-outline-obsidian filter-btn" data-filter="interior">Interiors</button>
+                <button class="btn btn-outline-obsidian filter-btn" data-filter="ext">Exterior</button>
+            </div>
+        </div>
+
+        <!-- Project Masonry Grid -->
+        <div class="row g-4 project-container">
+            <!-- Project Item 1 -->
+            <div class="col-lg-4 col-md-6 project-item demo">
+                <div class="project-card position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="{% static 'img/project-1.jpg' %}" alt="Structural Demolition">
+                    <div class="project-overlay">
+                        <div class="p-4">
+                            <h4 class="text-white text-uppercase fw-bold mb-2">Structural Demo</h4>
+                            <p class="text-bronze small text-uppercase mb-0">Commercial Site Prep</p>
+                            <a href="#" class="btn btn-bronze mt-3 btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Item 2 -->
+            <div class="col-lg-4 col-md-6 project-item roof">
+                <div class="project-card position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="{% static 'img/project-2.jpg' %}" alt="Architectural Roofing">
+                    <div class="project-overlay">
+                        <div class="p-4">
+                            <h4 class="text-white text-uppercase fw-bold mb-2">Slate Roofing</h4>
+                            <p class="text-bronze small text-uppercase mb-0">Residential Luxury</p>
+                            <a href="#" class="btn btn-bronze mt-3 btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Item 3 -->
+            <div class="col-lg-4 col-md-6 project-item interior">
+                <div class="project-card position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="{% static 'img/project-3.jpg' %}" alt="Framing">
+                    <div class="project-overlay">
+                        <div class="p-4">
+                            <h4 class="text-white text-uppercase fw-bold mb-2">Elite Framing</h4>
+                            <p class="text-bronze small text-uppercase mb-0">Structural Engineering</p>
+                            <a href="#" class="btn btn-bronze mt-3 btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more items as needed following the same pattern -->
+        </div>
+    </div>
+</div>
+<!-- Portfolio End -->
+
+<!-- Experience CTA -->
+<section class="py-5 bg-obsidian text-white text-center">
+    <div class="container">
+        <h2 class="text-uppercase fw-bold">Have a project in mind?</h2>
+        <p class="text-white-50">Our engineering team is ready to provide a detailed consultation.</p>
+        <a href="{% url 'contact' %}" class="btn btn-bronze mt-3 px-5 py-2">Get Started</a>
+    </div>
+</section>
+
+<!-- Filter Script -->
+<script>
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            
+            // Toggle active class
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Filter items
+            document.querySelectorAll('.project-item').forEach(item => {
+                if (filter === 'all' || item.classList.contains(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

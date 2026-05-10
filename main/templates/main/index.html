@@ -1,0 +1,758 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Carousel Start -->
+<div id="hero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    
+    <!-- Floating Trust Ribbon (Information from A&J) -->
+    <div class="trust-ribbon d-none d-lg-flex">
+        <div class="trust-item">
+            <i class="fas fa-certificate"></i>
+            <div>
+                <span class="d-block">NJ Licensed</span>
+                <small>#13VH12735200</small>
+            </div>
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-truck-pickup"></i>
+            <div>
+                <span class="d-block">Same-Day Service</span>
+                <small>Debris & Junk Removal</small>
+            </div>
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-map-marked-alt"></i>
+            <div>
+                <span class="d-block">Local NJ Experts</span>
+                <small>Serving NJ & Surrounding</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-inner">
+        <!-- Slide 1: Demolition & Site Prep -->
+        <div class="carousel-item active">
+            <img src="{% static 'img/demo1-bg.jpg' %}" class="d-block w-100 hero-img" alt="Expert NJ Demolition Services">
+            <div class="carousel-caption">
+                <div class="content-box">
+                    <span class="caption-label"><i class="fas fa-hammer me-2"></i>TOTAL & SELECTIVE DEMOLITION</span>
+                    <h1 class="display-1 fw-extra-bold">EXPERTS IN <br><span class="text-bronze">DESTRUCTION.</span></h1>
+                    <p class="lead mb-4">From interior gutting to full structural removal. We provide safe, surgical, and efficient demolition services across New Jersey.</p>
+                    <div class="btn-group-hero">
+                        <a href="tel:+1 732-690-4863" class="btn btn-bronze px-5 py-3 me-3">
+                            <i class="fas fa-phone-alt me-2"></i>FREE ESTIMATE
+                        </a>
+                        <a href="#services" class="btn btn-outline-light px-5 py-3">OUR SERVICES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Debris & Site Clearing -->
+        <div class="carousel-item">
+            <img src="{% static 'img/cleanup-bg.jpg' %}" class="d-block w-100 hero-img" alt="Professional Junk Removal NJ">
+            <div class="carousel-caption">
+                <div class="content-box">
+                    <span class="caption-label"><i class="fas fa-dumpster me-2"></i>REMOVAL & CLEANUP</span>
+                    <h1 class="display-1 fw-extra-bold">CLEAN SITES. <br><span class="text-bronze">ZERO STRESS.</span></h1>
+                    <p class="lead mb-4">Post-construction debris, residential cleanouts, and site clearing. We leave your property ready for its next phase.</p>
+                    <div class="btn-group-hero">
+                        <a href="tel:+1 732-690-4863" class="btn btn-bronze px-5 py-3">
+                            <i class="fas fa-calendar-check me-2"></i>BOOK REMOVAL
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Professional Nav Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
+        <span class="custom-nav-icon"><i class="fas fa-chevron-left"></i></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
+        <span class="custom-nav-icon"><i class="fas fa-chevron-right"></i></span>
+    </button>
+</div>
+<!-- Carousel End -->
+
+<!-- About Section - High End Modernized -->
+<section class="about-section position-relative overflow-hidden py-6">
+    <div class="container-fluid px-lg-5">
+        <div class="row g-5 align-items-center">
+            
+            <!-- Content Column -->
+            <div class="col-lg-6">
+                <div class="content-wrapper pe-lg-4">
+                    <div class="subtitle-wrapper d-flex align-items-center mb-3">
+                        <span class="line-accent"></span>
+                        <h6 class="text-bronze text-uppercase fw-bold mb-0 ms-3" style="letter-spacing: 4px;">Premium Engineering</h6>
+                    </div>
+                    
+                    <h1 class="display-3 fw-900 text-uppercase mb-4">
+                        A&J <span class="text-outline">Contractors</span> <br>
+                        <span class="text-bronze">Elite</span> Site Solutions
+                    </h1>
+
+                    <div class="quote-box mb-4">
+                        <p class="lead fw-normal text-dark border-start border-4 border-bronze ps-4 py-2">
+                            Transforming NJ's landscapes through structural precision and unmatched site reliability.
+                        </p>
+                    </div>
+
+                    <p class="mb-5 lead-text text-muted">
+                        A&J Contractors LLC represents the intersection of brute force and surgical precision. As a family-owned leader in <strong>Selective Demolition</strong> and <strong>Debris Management</strong>, we prioritize the integrity of your property. We don't just clear space; we prepare the canvas for your next great build.
+                    </p>
+                    
+                    <!-- New Service Mosaic -->
+                    <div class="service-mosaic mb-5">
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4">
+                                <div class="mosaic-item">
+                                    <i class="fa fa-tools mb-2"></i>
+                                    <span>Demolition</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="mosaic-item">
+                                    <i class="fa fa-truck-loading mb-2"></i>
+                                    <span>Removal</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="mosaic-item">
+                                    <i class="fa fa-shield-virus mb-2"></i>
+                                    <span>Licensed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-group d-flex align-items-center gap-4">
+                        <a href="tel:7326904863" class="btn btn-premium-bronze px-5 py-3">Start Your Estimate</a>
+                        <div class="contact-hint d-none d-md-block">
+                            <small class="d-block text-muted text-uppercase">Direct Line</small>
+                            <span class="fw-bold text-dark">732-690-4863</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Layered Image Column -->
+            <div class="col-lg-6">
+                <div class="image-stack-container position-relative">
+                    <!-- Main Image with Overlay -->
+                    <div class="main-image-wrapper shadow-2xl">
+                        <img src="{% static 'img/about.jpg' %}" alt="A&J Work" class="img-fluid main-img">
+                        <div class="glass-overlay"></div>
+                    </div>
+
+                    <!-- Floating Performance Stat -->
+                    <div class="stat-card bg-obsidian p-4 shadow-lg animate-float">
+                        <div class="d-flex align-items-center">
+                            <h2 class="display-5 text-bronze fw-bold mb-0 me-3">100%</h2>
+                            <p class="text-white small text-uppercase mb-0 fw-bold letter-spacing-1">Job Site<br>Cleanliness</p>
+                        </div>
+                    </div>
+
+                    <!-- Geometric Accent -->
+                    <div class="geo-accent"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="brand-identity-section py-0"> <!-- Removed vertical padding here to touch edges -->
+    <div class="container-fluid px-0">
+        <div class="brand-card shadow-lg rounded-0 border-0"> <!-- Rounded-0 makes it look better at full width -->
+            <div class="row align-items-center g-0">
+                
+                <!-- Column 1: Logo Section -->
+                <div class="col-lg-3 brand-side-block text-center py-5">
+                    <div class="logo-container px-3">
+                        <img src="{% static 'img/brand.jpg' %}" alt="A&J Contractors Logo" class="brand-logo-main">
+                    </div>
+                    <div class="exp-badge mt-3">
+                        <span class="d-block fw-bold text-bronze">ESTABLISHED</span>
+                        <span class="text-white small text-uppercase letter-spacing-2">Professional Excellence</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Content Section -->
+                <div class="col-lg-6 brand-center-block text-center px-4 px-lg-5 py-5">
+                    <h2 class="text-uppercase fw-800 mb-3 text-white">
+                        A&J <span class="text-bronze">Contractors LLC</span>
+                    </h2>
+                    <p class="brand-description">
+                        Specializing in **Selective Demolition**, **Debris Removal**, and **General Contracting**. 
+                        We provide New Jersey with precision engineering and reliable site clearing solutions. 
+                        Licensed, Insured, and committed to leaving every job site spotless.
+                    </p>
+                    <div class="brand-badges d-flex justify-content-center flex-wrap gap-3 mt-4">
+                        <span class="badge-item"><i class="fas fa-shield-alt me-2"></i>Licensed</span>
+                        <span class="badge-item"><i class="fas fa-check-circle me-2"></i>Insured</span>
+                        <span class="badge-item"><i class="fas fa-clock me-2"></i>24/7 Response</span>
+                    </div>
+                </div>
+
+                <!-- Column 3: Action Section -->
+                <div class="col-lg-3 brand-action-block text-center py-5">
+                    <div class="action-card p-4 mx-3">
+                        <h5 class="text-white fw-bold mb-3">Ready to Start?</h5>
+                        <p class="text-muted small mb-4">Get your free project estimate within 24 hours.</p>
+                        <a href="tel:+1 732-690-4863" class="btn btn-bronze-action w-100 mb-2">
+                            <i class="fas fa-phone-alt me-2"></i>(732) 690-4863
+                        </a>
+                        <span class="license-text">NJ LIC #13VH12735200</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section - High-End Evolution -->
+<section class="services-premium py-40 bg-light-gray">
+    <div class="container">
+        <!-- Header -->
+        <div class="row mb-4 align-items-end">
+            <div class="col-lg-7">
+                <div class="subtitle-wrapper d-flex align-items-center mb-2">
+                    <span class="line-accent"></span>
+                    <h6 class="text-bronze text-uppercase fw-bold mb-0 ms-3" style="letter-spacing: 3px;">Our Expertise</h6>
+                </div>
+                <h1 class="display-4 text-uppercase fw-900">Elite Property <span class="text-outline">Transformations</span></h1>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+                <p class="text-muted mb-0 border-start-lg border-bronze ps-lg-4">Delivering licensed and insured excellence across 9 specialized construction trades in NY & NJ.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- 1. Siding Installation -->
+            <div class="col-xl-4 col-md-6">
+                <div class="aj-service-card">
+                    <div class="aj-card-img">
+                        <img src="{% static 'img/siding.jpg' %}" alt="Siding">
+                        <div class="aj-overlay"></div>
+                        <span class="aj-category">Exterior</span>
+                    </div>
+                    <div class="aj-card-body">
+                        <div class="aj-icon"><i class="fa fa-home"></i></div>
+                        <h4 class="text-uppercase">Siding Installation</h4>
+                        <p>Premium vinyl and fiber cement siding to protect and beautify your NJ home.</p>
+                        <a href="tel:7326904863" class="aj-link">Discuss Project <i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Fencing Installation -->
+            <div class="col-xl-4 col-md-6">
+                <div class="aj-service-card">
+                    <div class="aj-card-img">
+                        <img src="{% static 'img/fencing.jpg' %}" alt="Fencing">
+                        <div class="aj-overlay"></div>
+                        <span class="aj-category">Privacy</span>
+                    </div>
+                    <div class="aj-card-body">
+                        <div class="aj-icon"><i class="fa fa-border-all"></i></div>
+                        <h4 class="text-uppercase">Fencing Installation</h4>
+                        <p>Custom wood, vinyl, and metal fencing solutions for security and curb appeal.</p>
+                        <a href="#" class="aj-link">Discuss Project <i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Roofing Services -->
+            <div class="col-xl-4 col-md-6">
+                <div class="aj-service-card">
+                    <div class="aj-card-img">
+                        <img src="{% static 'img/roofing.jpg' %}" alt="Roofing">
+                        <div class="aj-overlay"></div>
+                        <span class="aj-category">Protection</span>
+                    </div>
+                    <div class="aj-card-body">
+                        <div class="aj-icon"><i class="fa fa-tools"></i></div>
+                        <h4 class="text-uppercase">Roofing Services</h4>
+                        <p>Full roof replacements and repairs using high-durability architectural shingles.</p>
+                        <a href="#" class="aj-link">Discuss Project <i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Kitchen Remodeling -->
+            <div class="col-xl-4 col-md-6">
+                <div class="aj-service-card highlight-card">
+                    <div class="aj-card-img">
+                        <img src="{% static 'img/kitchen.jpg' %}" alt="Kitchen">
+                        <div class="aj-overlay"></div>
+                        <span class="aj-category">Interior</span>
+                    </div>
+                    <div class="aj-card-body">
+                        <div class="aj-icon"><i class="fa fa-utensils"></i></div>
+                        <h4 class="text-uppercase">Kitchen Remodeling</h4>
+                        <p>Custom cabinetry, countertops, and layouts designed for modern living.</p>
+                        <a href="#" class="aj-link">Discuss Project <i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Bathroom Remodeling -->
+            <div class="col-xl-4 col-md-6">
+                <div class="aj-service-card highlight-card">
+                    <div class="aj-card-img">
+                        <img src="{% static 'img/remodeling.jpg' %}" alt="Bathroom">
+                        <div class="aj-overlay"></div>
+                        <span class="aj-category">Interior</span>
+                    </div>
+                    <div class="aj-card-body">
+                        <div class="aj-icon"><i class="fa fa-bath"></i></div>
+                        <h4 class="text-uppercase">Bathroom Remodeling</h4>
+                        <p>Transforming old bathrooms into spa-like retreats with premium fixtures.</p>
+                        <a href="#" class="aj-link">Discuss Project <i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Interior & Exterior Painting -->
+            <div class="col-xl-4 col-md-6">
+                <div class="aj-service-card">
+                    <div class="aj-card-img">
+                        <img src="{% static 'img/painting.jpg' %}" alt="Painting">
+                        <div class="aj-overlay"></div>
+                        <span class="aj-category">Finishing</span>
+                    </div>
+                    <div class="aj-card-body">
+                        <div class="aj-icon"><i class="fa fa-paint-roller"></i></div>
+                        <h4 class="text-uppercase">Painting Services</h4>
+                        <p>Professional grade coatings and finishes for every surface of your property.</p>
+                        <a href="#" class="aj-link">Discuss Project <i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Ceramic Tiling -->
+            <div class="col-xl-4 col-md-6">
+                <div class="aj-service-card">
+                    <div class="aj-card-img">
+                        <img src="{% static 'img/tiling.jpg' %}" alt="Tiling">
+                        <div class="aj-overlay"></div>
+                        <span class="aj-category">Interior</span>
+                    </div>
+                    <div class="aj-card-body">
+                        <div class="aj-icon"><i class="fa fa-layer-group"></i></div>
+                        <h4 class="text-uppercase">Ceramic Tiling</h4>
+                        <p>Expert tile installation for floors, backsplashes, and custom shower walls.</p>
+                        <a href="#" class="aj-link">Discuss Project <i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Basement Finishing -->
+            <div class="col-xl-4 col-md-6">
+                <div class="aj-service-card">
+                    <div class="aj-card-img">
+                        <img src="{% static 'img/basement.jpg' %}" alt="Basement">
+                        <div class="aj-overlay"></div>
+                        <span class="aj-category">Structural</span>
+                    </div>
+                    <div class="aj-card-body">
+                        <div class="aj-icon"><i class="fa fa-door-open"></i></div>
+                        <h4 class="text-uppercase">Basement Finishing</h4>
+                        <p>Total basement conversions to maximize your home's square footage and value.</p>
+                        <a href="#" class="aj-link">Discuss Project <i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Framing Services -->
+            <div class="col-xl-4 col-md-6">
+                <div class="aj-service-card">
+                    <div class="aj-card-img">
+                        <img src="{% static 'img/framing.jpg' %}" alt="Framing">
+                        <div class="aj-overlay"></div>
+                        <span class="aj-category">Structural</span>
+                    </div>
+                    <div class="aj-card-body">
+                        <div class="aj-icon"><i class="fa fa-hammer"></i></div>
+                        <h4 class="text-uppercase">Framing Services</h4>
+                        <p>Precision structural framing for additions, new builds, and open-concept layouts.</p>
+                        <a href="#" class="aj-link">Discuss Project <i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose A&J - Premium Redesign -->
+<section class="py-100 bg-white overflow-hidden position-relative">
+    <!-- Decorative Background Element -->
+    <div class="bg-abstract-shape"></div>
+
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <!-- Left Side: Visual Narrative -->
+            <div class="col-lg-6">
+                <div class="why-image-composition">
+                    <div class="main-img-wrapper shadow-lg">
+                        <img src="{% static 'img/construction-site.jpg' %}" alt="Professional Craftsmanship" class="img-fluid">
+                        <div class="experience-badge">
+                            <span class="number">15+</span>
+                            <span class="text">Years of <br>Excellence</span>
+                        </div>
+                    </div>
+                    <!-- Smaller floating image for architectural depth -->
+                    <div class="sub-img-wrapper shadow-lg d-none d-md-block">
+                        <img src="{% static 'img/interior-finish.jpg' %}" alt="Detail Oriented">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Content & Features -->
+            <div class="col-lg-6">
+                <div class="ps-lg-4">
+                    <h6 class="text-bronze text-uppercase fw-bold mb-3" style="letter-spacing: 4px;">The A&J Standard</h6>
+                    <h2 class="display-5 text-uppercase fw-900 mb-4">Precision Engineering, <span class="text-outline">Personalized</span> Service</h2>
+                    <p class="lead text-muted mb-5">We don't just build structures; we build trust through transparency. Our approach combines old-world craftsmanship with modern project management to ensure your vision is realized without compromise.</p>
+
+                    <div class="row g-4">
+                        <!-- Feature 1 -->
+                        <div class="col-sm-6">
+                            <div class="aj-feature-item">
+                                <div class="aj-icon-box">
+                                    <i class="fas fa-hard-hat"></i>
+                                </div>
+                                <h5 class="text-uppercase fw-bold">Safety-First Culture</h5>
+                                <p class="small text-muted mb-0">OSHA-certified teams prioritizing a clean and secure job site for every project.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="col-sm-6">
+                            <div class="aj-feature-item">
+                                <div class="aj-icon-box">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <h5 class="text-uppercase fw-bold">Full Accountability</h5>
+                                <p class="small text-muted mb-0">Fully licensed & insured in NJ/NY. We take total ownership of the project lifecycle.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="col-sm-6">
+                            <div class="aj-feature-item">
+                                <div class="aj-icon-box">
+                                    <i class="fas fa-microscope"></i>
+                                </div>
+                                <h5 class="text-uppercase fw-bold">Surgical Precision</h5>
+                                <p class="small text-muted mb-0">From structural framing to high-end finishes, our detail-oriented focus is unmatched.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 4 -->
+                        <div class="col-sm-6">
+                            <div class="aj-feature-item">
+                                <div class="aj-icon-box">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h5 class="text-uppercase fw-bold">Client Advocacy</h5>
+                                <p class="small text-muted mb-0">We represent your interests, ensuring vendors and materials meet our elite standards.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <a href="#contact" class="btn btn-obsidian px-5 py-3 text-uppercase fw-bold">Start Your Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Premium Architectural Portfolio -->
+<section class="py-100 bg-platinum">
+    <div class="container">
+        <div class="row align-items-end mb-5">
+            <div class="col-lg-7">
+                <h6 class="text-bronze text-uppercase fw-bold mb-3" style="letter-spacing: 5px;">Our Work</h6>
+                <h2 class="display-4 text-uppercase fw-900 mb-0">Building the <span class="text-outline">Tri-State</span></h2>
+            </div>
+            <div class="col-lg-5 text-lg-end mt-4">
+                <p class="text-muted small text-uppercase fw-bold">Licensed in NJ & NY | Elizabeth • Newark • Jersey City</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- FEATURED PROJECT: Newark Commercial -->
+            <div class="col-lg-8">
+                <div class="aj-portfolio-card featured">
+                    <img src="{% static 'img/newark-project.jpg' %}" alt="Newark Commercial Renovation">
+                    <div class="aj-card-badge">Featured</div>
+                    <div class="aj-card-info">
+                        <span class="category">Commercial Renovation</span>
+                        <h3 class="title">Urban Revitalization</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt me-2"></i>Newark, NJ</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 2: Elizabeth Exterior -->
+            <div class="col-lg-4">
+                <div class="aj-portfolio-card h-100">
+                    <img src="{% static 'img/elizabeth-deck.jpg' %}" alt="Elizabeth Deck Project">
+                    <div class="aj-card-info">
+                        <span class="category">Exterior Living</span>
+                        <h4 class="title">Custom Decking</h4>
+                        <p class="location">Elizabeth, NJ</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: Jersey City Masonry -->
+            <div class="col-lg-4">
+                <div class="aj-portfolio-card">
+                    <img src="{% static 'img/jc-masonry.jpg' %}" alt="Jersey City Masonry">
+                    <div class="aj-card-info">
+                        <span class="category">Masonry & Stone</span>
+                        <h4 class="title">Luxury Brownstone</h4>
+                        <p class="location">Jersey City, NJ</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 4: South River Residential -->
+            <div class="col-lg-8">
+                <div class="aj-portfolio-card">
+                    <img src="{% static 'img/south-river.jpg' %}" alt="South River Interior">
+                    <div class="aj-card-info">
+                        <span class="category">Interior Remodeling</span>
+                        <h4 class="title">Modern Home Transformation</h4>
+                        <p class="location">South River, NJ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Proof Footer -->
+        <div class="mt-5 text-center">
+            <a href="https://www.facebook.com/ayjcontactors" target="_blank" class="btn btn-outline-obsidian px-5 py-3 text-uppercase fw-bold">
+                <i class="fab fa-facebook-f me-2"></i> View More on Facebook
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose A&J - Elite Standard -->
+<section class="py-100 bg-white position-relative overflow-hidden">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <!-- Left Side: Layered Architectural Visuals -->
+            <div class="col-lg-6">
+                <div class="aj-visual-stack">
+                    <div class="main-frame shadow-lg">
+                        <img src="{% static 'img/high-end-construction.jpg' %}" alt="A&J Elite Craftsmanship" class="img-fluid">
+                    </div>
+                    <div class="floating-stat shadow">
+                        <div class="stat-inner">
+                            <span class="d-block h2 fw-900 mb-0">15+</span>
+                            <span class="small text-uppercase fw-bold text-bronze">Years of Trust</span>
+                        </div>
+                    </div>
+                    <!-- Decorative architectural lines -->
+                    <div class="line-deco"></div>
+                </div>
+            </div>
+
+            <!-- Right Side: The Advocacy Narrative -->
+            <div class="col-lg-6">
+                <div class="ps-lg-4">
+                    <h6 class="text-bronze text-uppercase fw-bold mb-3" style="letter-spacing: 4px;">The A&J Advantage</h6>
+                    <h2 class="display-5 text-uppercase fw-900 mb-4">More Than Contractors. <span class="text-outline">Your Advocates.</span></h2>
+                    <p class="lead text-muted mb-5">At A&J Contractors, we bridge the gap between your vision and structural reality. We represent your interests, ensuring every vendor, material, and blueprint meets our elite standard of excellence.</p>
+
+                    <div class="row g-4">
+                        <!-- Feature 1: Safety -->
+                        <div class="col-md-6">
+                            <div class="aj-hire-card">
+                                <div class="aj-icon-wrapper">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
+                                <h5 class="text-uppercase fw-bold">Unmatched Safety</h5>
+                                <p class="small text-muted mb-0">OSHA-certified management prioritizing site security and client peace of mind.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 2: Reliability -->
+                        <div class="col-md-6">
+                            <div class="aj-hire-card">
+                                <div class="aj-icon-wrapper">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h5 class="text-uppercase fw-bold">Full Accountability</h5>
+                                <p class="small text-muted mb-0">Transparent communication and project reporting. We take total ownership of results.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 3: Scope -->
+                        <div class="col-md-6">
+                            <div class="aj-hire-card">
+                                <div class="aj-icon-wrapper">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h5 class="text-uppercase fw-bold">Diverse Expertise</h5>
+                                <p class="small text-muted mb-0">From surgical masonry to full-scale commercial builds across Elizabeth, Newark, Souht River & Jersey City.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 4: Integrity -->
+                        <div class="col-md-6">
+                            <div class="aj-hire-card">
+                                <div class="aj-icon-wrapper">
+                                    <i class="fas fa-check-double"></i>
+                                </div>
+                                <h5 class="text-uppercase fw-bold">Elite Standards</h5>
+                                <p class="small text-muted mb-0">Licensed, insured, and vetted. We don't just finish projects; we perfect them.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 d-flex gap-3">
+                        <a href="tel:+1 732-690-4863" class="btn btn-obsidian px-5 py-3 text-uppercase fw-bold">Call Office</a>
+                        <a href="{% url 'contact' %}" class="btn btn-outline-bronze px-5 py-3 text-uppercase fw-bold">Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- A&J Project Consultation Start -->
+<div class="container-fluid py-100 bg-light position-relative">
+    <div class="container">
+        <div class="row g-0 shadow-premium bg-white overflow-hidden">
+            <!-- Left Side: Professional Intake Form -->
+            <div class="col-lg-7 p-5">
+                <div class="form-header mb-5">
+                    <h6 class="text-bronze text-uppercase fw-bold mb-2" style="letter-spacing: 5px;">Project Inquiry</h6>
+                    <h2 class="display-6 text-uppercase fw-900">Start Your <span class="text-outline">Consultation</span></h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <form>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold text-uppercase opacity-50">Full Name</label>
+                            <input type="text" class="form-control aj-input" placeholder="e.g. John Doe">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold text-uppercase opacity-50">Phone Number</label>
+                            <input type="tel" class="form-control aj-input" placeholder="(555) 000-0000">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-uppercase opacity-50">Project Location</label>
+                            <select class="form-select aj-input">
+                                <option selected disabled>Select City (NJ/NY)</option>
+                                <option>Elizabeth, NJ</option>
+                                <option>Newark, NJ</option>
+                                <option>Jersey City, NJ</option>
+                                <option>New York City, NY</option>
+                                <option>Other Location</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-uppercase opacity-50">Scope of Work</label>
+                            <textarea class="form-control aj-input" rows="4" placeholder="Briefly describe the commercial or residential requirements..."></textarea>
+                        </div>
+                        <div class="col-12 mt-5">
+                            <button class="btn btn-obsidian w-100 py-3 text-uppercase fw-bold" type="submit">
+                                Request Quote <i class="fas fa-paper-plane ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Side: Corporate Contact Identity -->
+            <div class="col-lg-5 bg-obsidian p-5 text-white d-flex flex-column">
+                <div class="mb-auto">
+                    <h3 class="text-uppercase fw-900 mb-5">A&J <span class="text-bronze">Contractors</span></h3>
+                    
+                    <div class="contact-entry mb-5">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="aj-dot me-3"></div>
+                            <h6 class="text-bronze text-uppercase fw-bold mb-0" style="letter-spacing: 2px;">HQ Location</h6>
+                        </div>
+                        <p class="ps-4 opacity-75">Elizabeth, New Jersey<br>Serving the Tri-State Area</p>
+                    </div>
+
+                    <div class="contact-entry mb-5">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="aj-dot me-3"></div>
+                            <h6 class="text-bronze text-uppercase fw-bold mb-0" style="letter-spacing: 2px;">Direct Line</h6>
+                        </div>
+                        <p class="ps-4 h4 fw-bold">+1 732-690-4863</p>
+                    </div>
+
+                    <div class="contact-entry mb-5">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="aj-dot me-3"></div>
+                            <h6 class="text-bronze text-uppercase fw-bold mb-0" style="letter-spacing: 2px;">Correspondence</h6>
+                        </div>
+                        <p class="ps-4 opacity-75">info@anjcontractors.com</p>
+                    </div>
+                </div>
+
+                <!-- Verified Badges / Social -->
+                <div class="social-footer pt-5 border-top border-secondary mt-5">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                            <a href="https://www.facebook.com/ayjcontactors" class="social-icon-btn me-3"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon-btn me-3"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <span class="small text-uppercase fw-bold text-bronze">Licensed & Insured</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- A&J Regional Coverage Map -->
+<section class="container-fluid p-0 position-relative" style="height: 600px; background: #121416;">
+    <!-- Modern Styled Map -->
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48419.04944355554!2d-74.24945325!3d40.6639891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24d6735e5e6fb%3A0xc3335b2e67a65955!2sElizabeth%2C%20NJ!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus" 
+        width="100%" 
+        height="100%" 
+        style="border:0; filter: grayscale(0.4) contrast(1.2) brightness(0.8);" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <!-- Floating Headquarters Card -->
+    <div class="aj-map-card d-none d-lg-block shadow-2xl">
+        <h6 class="text-bronze text-uppercase fw-bold mb-2" style="letter-spacing: 3px;">Headquarters</h6>
+        <h3 class="text-white text-uppercase fw-900 mb-3">Elizabeth, NJ</h3>
+        <p class="text-white-50 small mb-4">
+            Serving as the central hub for our <br>
+            <strong>NY & NJ Operations</strong>. We provide <br>
+            full-scale contracting across the Tri-State.
+        </p>
+        
+        <div class="service-cities mb-4">
+            <span class="badge bg-dark-bronze me-1">Newark</span>
+            <span class="badge bg-dark-bronze me-1">Jersey City</span>
+            <span class="badge bg-dark-bronze">Manhattan</span>
+        </div>
+
+        <div class="d-grid">
+            <a href="https://maps.google.com/?q=Elizabeth,NJ" target="_blank" class="btn btn-bronze text-uppercase fw-bold py-3">
+                <i class="fas fa-map-marked-alt me-2"></i> Open in Maps
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}   
