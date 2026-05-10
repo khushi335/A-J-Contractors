@@ -25,3 +25,6 @@ def exterior_demolition(request):
     
 def kitchen_renovation(request):
     return render(request, 'main/kitchen_renovation.html')
+    
+def bathroom_renovation(request):
+    return render(request, 'main/bathroom_renovation.html')
