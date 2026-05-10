@@ -31,3 +31,6 @@ def bathroom_renovation(request):
     
 def custom_shelving(request):
     return render(request, 'main/custom_shelving.html')
+    
+def steel_welding(request):
+    return render(request, 'main/steel_welding.html')

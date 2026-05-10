@@ -12,4 +12,5 @@ urlpatterns = [
     path('services/kitchen-renovation/', kitchen_renovation, name='kitchen_renovation'),
     path('services/bathroom-renovation/', bathroom_renovation, name='bathroom_renovation'),
     path('services/custom-shelving/',custom_shelving, name='custom_shelving'),
+    path('services/steel-welding/', steel_welding, name='steel_welding'),
 ]
