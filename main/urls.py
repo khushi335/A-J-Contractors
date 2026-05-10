@@ -9,4 +9,5 @@ urlpatterns = [
     path("contact/",contact,name="contact"),
     path('services/interior-demolition/', interior_demolition, name='interior_demolition'),
     path('services/exterior-demolition/', exterior_demolition, name='exterior_demolition'),
+    path('services/kitchen-renovation/', kitchen_renovation, name='kitchen_renovation'),
 ]
