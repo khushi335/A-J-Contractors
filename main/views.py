@@ -28,3 +28,6 @@ def kitchen_renovation(request):
     
 def bathroom_renovation(request):
     return render(request, 'main/bathroom_renovation.html')
+    
+def custom_shelving(request):
+    return render(request, 'main/custom_shelving.html')
